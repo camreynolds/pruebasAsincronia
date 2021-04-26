@@ -12,7 +12,7 @@ const getUser = function(id, cb){
   else cb(null, user);
 };
 
-getUser(3, function(err, data){
+getUser(1, function(err, data){
 	if(err) return console.log(err);
   console.log("Nombre de usuario es: " + data.nombre);
   console.log("Id de usuario es: " + data.id);
