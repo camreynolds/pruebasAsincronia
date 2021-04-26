@@ -1,6 +1,3 @@
-// Un Callback es una función que se ejecuta a través de otra función.
-// Un Callback no es asincrono.
-
 /*
 const getUser = function(id, cb){
 	const user = {
@@ -53,27 +50,40 @@ emails = [
   },
 ];
 
-function getUser(id,cb){
+function getUser(id){
 	const user = users.find(user => user.id === id);
-  if(!user)  return cb(`El usuario con el id: ${id} no existe.`);
-  cb(null, user);
+	const promise = new Promise(function(resolve, reject){
+		if(!user)  reject(`El usuario con el id: ${id} no existe.`)
+  	else resolve (user);	
+	});
+  return promise;
 };
 
-function getEmail(user, cb){
+function getEmail(user){
 	const email = emails.find(email => email.id === user.id);
-  if(!email) return cb(`${user.nombre} no tiene un correo asignado.`)
-  else  cb(null, {
-  	id: user.id,
-    nombre: user.nombre,
-    email: email.email
-  });
+	return promise = new Promise(function(resolve, reject){
+		if(!email) reject(`${user.nombre} no tiene un correo asignado.`)
+		else  resolve({
+							id: user.id,
+							nombre: user.nombre,
+							email: email.email
+						});	
+		});
 };
+
+getUser(2)
+	.then(res => getEmail(res))
+	.then(data => console.log(data))
+	.catch(e => console.error(e));
+
 
 // SE COMIENZA A FORMAR EL CALLBACK HELL.
-getUser(1, function(err, data){
+/*
+getUser(4, function(err, data){
 	if(err) return console.log(err);
   getEmail(data, function(err, res){
   	if(err) return console.log(err);
     console.log(res);
   });
 });
+*/
