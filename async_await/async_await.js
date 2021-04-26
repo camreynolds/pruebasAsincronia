@@ -52,7 +52,7 @@ emails = [
 const getUser = async (id) => {
 	const user = users.find(user => user.id === id);
 	if(!user) throw new Error(`El usuario con el id: ${id} no existe.`)
-  else return user;	
+  	else return user;	
 };
 
 async function getEmail (user) {
@@ -76,4 +76,4 @@ const getInfo = async (id) => {
 	};
 };
 
-getInfo(5).then(res => console.log(res))
+getInfo(4).then(res => console.log(res))
