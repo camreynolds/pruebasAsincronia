@@ -1,4 +1,12 @@
 /*
+	Ejemplo tomado de: https://youtu.be/kJ5yotZyW3k
+	
+	ASYNC/AWAIT
+		Es una implementación para hacer función asíncronas en javaScript de forma nativa.
+*/
+
+
+/*
 const getName = async () => {
 	return promise = new Promise( (resolve, reject) => {
 		setTimeout(() =>{
@@ -72,7 +80,7 @@ const getInfo = async (id) => {
 		return `${user.nombre} email es ${res.email}`	
 	}
 	catch (error) {
-		console.log(error);
+		console.error(error);
 	};
 };
 

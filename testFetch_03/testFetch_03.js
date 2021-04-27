@@ -19,6 +19,7 @@ botonImg.addEventListener("click", function(){
         .then(res => res.json())
         .then(res => res.urls.small)
         .then(res => {
+            console.log(res);
             document.getElementById("img").src = res;
         })
         .catch(e => {
