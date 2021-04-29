@@ -1,6 +1,7 @@
-import express from 'express'
+// Ejemplo tomado de la siguiente dirección: https://youtu.be/lV7mxivGX_I
 
-const app = express()
+// index.js sirve solo para que arranque la aplicación.
 
-app.listen('3000')
+import app from './app';
+app.listen('3000');
 console.log('Server Listen on port', 3000);

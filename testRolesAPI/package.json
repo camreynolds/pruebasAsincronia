@@ -1,15 +1,15 @@
 {
   "name": "testRolesAPI",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto para crear roles en endpoints.",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir build",
     "dev": "nodemon src/index.js --exec babel-node",
     "start": "node build/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["node", "nodejs", "endpoint", "javascript"],
+  "author": "Carlos A Muñoz Reynolds.",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
