@@ -9,6 +9,7 @@ const app = express()
 
 app.set('pkg', pkg) //Crea una variable de express y le asigna un valor.
 app.use(morgan('dev'));
+app.use(express.json()); // Traduce los objetos "json" a objetos de javascript.
 
 app.get('/', (req, res) => {
     res.json({
