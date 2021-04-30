@@ -4,6 +4,7 @@ import express from 'express'
 import morgan from 'morgan' // Morgan es un middleware de express.
 import pkg from '../package.json'
 import productsRoutes from './routes/productsrouters'
+import authroutes from './routes/authroutes'
 
 const app = express()
 
@@ -21,6 +22,7 @@ app.get('/', (req, res) => {
     });
 });
 
-app.use('/products', productsRoutes); // Todas estas rutas van a empezar con "'/products".
+app.use('/api/products', productsRoutes); // Todas estas rutas van a empezar con "'/products".
+app.use('/api/auth', authroutes); // Todas estas rutas van a empezar con "'/auth".
 
  export default app;
