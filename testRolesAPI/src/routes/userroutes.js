@@ -2,8 +2,12 @@ import {Router} from 'express' // Importa desde "express" el módulo llamado "Ro
 const router = Router() // Se inicializa de esta manera, ejecutándolo.
 
 import * as userCtrl from '../controllers/usercontroller';
-import {authJwt} from '../middlewares';
+import {authJwt, verifySignup} from '../middlewares';
 
-router.post('/', [authJwt.verifyToken, authJwt.isAdmin] ,userCtrl.createUser);
+router.post('/', [
+    authJwt.verifyToken, 
+    authJwt.isAdmin, 
+    verifySignup.checkRolesExisted
+],userCtrl.createUser);
 
 export default router; // Se exporta de esta manera.

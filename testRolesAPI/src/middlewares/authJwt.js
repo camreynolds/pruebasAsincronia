@@ -8,7 +8,7 @@ export const verifyToken = async (req, res, next) => {
     try {
         const token = req.headers["x-access-token"];
 
-        if(!token) return res.status(403).json({mensaje: 'No se ha prevoido el token.'});
+        if(!token) return res.status(403).json({mensaje: 'No se ha proveído el token.'});
 
         const decoded = jwt.verify(token, config.SECRET);
         req.userId = decoded.id; // Dentro del objeto "req" se crea una propiedad llamada "userId" y le guardo el "id" decodificado.
