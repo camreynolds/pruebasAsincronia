@@ -23,3 +23,12 @@ user:
 }
 
 
+NOTAS ADICIONALES: 
+Investigar sobre el uso de las siguientes librerias.
+
+- express validator.
+- join npm.
+
+Despliegue:
+- Heroku.
+- Docker.
