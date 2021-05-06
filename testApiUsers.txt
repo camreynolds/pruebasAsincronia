@@ -1,0 +1,25 @@
+admin:
+{
+    "name": "carlos",
+    "email": "carlos@dominio.com",
+    "pasword": "clave",
+    "roles": ["admin"]
+}
+
+moderator:
+{
+    "name": "andres",
+    "email": "andres@dominio.com",
+    "pasword": "clave",
+    "roles": ["moderator"]
+}
+
+user:
+{
+    "name": "mauricio",
+    "email": "mauricio@dominio.com",
+    "pasword": "clave",
+    "roles": ["user"]
+}
+
+
