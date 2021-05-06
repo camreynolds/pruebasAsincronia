@@ -3,6 +3,20 @@ import jwt from 'jsonwebtoken';
 import config from '../config';
 import Role from '../models/Role';
 
+
+export const signUp = async (req, res) => {  
+    const {username, email, password, roles} = req.body;
+    
+    const newUser = new User({
+        username,
+        email, 
+        password: await User.encryptPassword(password),
+    });
+
+    console.log("Nuevo usuario: " + newUser);
+    res.json({"Nuevo usuario:": newUser});
+};
+/*
 export const signUp = async (req, res) => {  
     const {username, email, password, roles} = req.body;
 
@@ -31,7 +45,7 @@ export const signUp = async (req, res) => {
 
 
 };
-
+*/
 export const signIn = async (req, res) => {
     const userFound = await User.findOne({email: req.body.email}).populate('roles');
 
