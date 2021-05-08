@@ -16,4 +16,3 @@ INSERT INTO employees VALUES
     (2, 'Juan Luis', 50000),
     (3, 'Cristobal Ramón', 10000);
 
-SELECT * FROM employees;

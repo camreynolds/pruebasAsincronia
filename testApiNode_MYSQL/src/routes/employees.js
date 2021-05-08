@@ -28,4 +28,6 @@ router.get('/:id', async (req, res) => {
   });
 });
 
+//router.post();
+
 module.exports = router;                // Se exporta la variable (constante) llamada "router".
